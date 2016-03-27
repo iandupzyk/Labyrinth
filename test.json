@@ -1,0 +1,10 @@
+{
+    "port" : 4000,
+    "endpoints" : {
+        "/job-exec/<string:job_spec>" : "JobRunner",
+        "/job-manager/<string:job_status>" : "JobManager"
+    },
+    "nodes" : [
+        "127.0.0.1"
+    ]
+}

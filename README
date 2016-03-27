@@ -1,0 +1,9 @@
+Labyrinth is a fault tolerant job scheduler.  It is based
+on a Python Flask API and is designed to run in a cluster
+where one node is designated as a leader and the others as
+workers.  If the leader goes down and does not communicate
+to the workers within a specified period of time, the workers
+will communicate with eachother and elect a new leader.  If
+a worker goes down and does not communicate for a specified 
+period of time the leader will reassign all jobs running on
+the failed worker to the other available workers.

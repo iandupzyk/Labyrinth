@@ -14,6 +14,7 @@ setup(name='Labyrinth',
           'flask_restful',
           'json',
           'logging',
-          'os'
+          'os',
+          'subprocess'
           ]
      )
