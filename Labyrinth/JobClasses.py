@@ -98,7 +98,16 @@ class HiveJob(Job) :
         self.environ = self.spec['environment']
 
     def run(self) :
-        pass
+        if self.run_type == 'hiveserver' :
+            pass
+            # call to hiveserver here
+        elif self.run_type == 'hivecli' :
+            params = []
+            for p, v in self.parameters.iteritems() :
+                params.append("-d {0}={1}".format(p, v))
+
+            params = ' '.join(params)
+
 
 class ShellJob(Job) :
     def run(self) :
